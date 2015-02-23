@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 #include <math.h>
 
 
@@ -7,8 +7,6 @@
     OS scheme.
     see: S. Obara and A. Saika, 
     J. Chem. Phys. 84, 3963 (1986); doi: 10.1063/1.450106
-  
-  
 */
 
 /*
@@ -80,7 +78,10 @@ int main()
     double R = 1.0;
     double za = 0.1, zb = 0.1;
     double x;
-    x = overlap_ssu(R, za, zb);
-    printf("");
-    
+    int i;
+    for (i = 0; i < 100; i++) {
+        x = overlap_ssu(R+0.1*i, za, zb);
+        printf("%12.8e\n", x);
+    }
+    return 0;
 }
