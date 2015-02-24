@@ -81,7 +81,8 @@ int main()
     int i;
     for (i = 0; i < 100; i++) {
         x = overlap_ssu(R+0.1*i, za, zb);
-        printf("%12.8e\n", x);
+        y = ovlpu(R+0.1*i, za, zb);
+        printf("%12.8g%12.8g\n", x, y);
     }
     return 0;
 }
